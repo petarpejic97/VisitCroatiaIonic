@@ -1,0 +1,20 @@
+<ion-content>
+  <div class="content-wrapper">
+      <div class="input-wrapper">
+          <ion-item>
+            <ion-label class="inputemail" position="floating">Enter your email </ion-label>
+            <ion-input [(ngModel)]=korisnik.email></ion-input>
+          </ion-item>
+              
+          <ion-item>
+            <ion-label class="inputpassword" position="floating">Enter your password </ion-label>
+            <ion-input [(ngModel)]=korisnik.password type=password></ion-input>
+          </ion-item>
+        </div>
+        <div class="button-wrapper">
+          <ion-button expand="block" (click)="dohvatiKorisnika(korisnik)">Login</ion-button>
+          <ion-label (click)="goToCityList()"><strong style="color:grey">Continue without login</strong></ion-label>
+          <ion-label (click)="goToRegister()"><strong style="color:grey">You don't have account? Click here</strong></ion-label>
+        </div>
+      </div>
+</ion-content>

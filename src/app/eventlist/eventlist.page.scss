@@ -1,0 +1,42 @@
+#headertitle{
+    color: white;
+    text-align:center;
+    font-size: 30px;
+    font-family: 'Indie Flower', cursive;
+    margin-left: -50px;
+}
+.arrow{
+    background-color:#FF9B3C;
+}
+ion-icon{
+    color:rgb(255, 255, 255);
+}
+ion-button{
+    font-family:  'Raleway', sans-serif;
+}
+.back{
+    width: 30px;
+    height: 30px;
+    margin:10px;
+}
+.img-wrapper{
+    background-color: grey;
+    height: 80px;
+    width: 80px;
+    float: left;
+}
+img{
+    height: 80px;
+    object-fit: cover;
+    width: 80px;
+}
+.podaci{
+    padding-left: 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+li{
+    overflow: auto;
+    padding:10px;
+}
+   

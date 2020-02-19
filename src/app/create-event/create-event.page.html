@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-row>
+          <ion-buttons  left>
+              <button class="arrow"  ion-button ion-only (click)="backonlist()">
+             <ion-icon  class="back" name="arrow-back"></ion-icon>
+              </button>
+        </ion-buttons>
+              <ion-title class="headertitle" >Visit Croatia</ion-title>
+      </ion-row>
+  </ion-toolbar>
+</ion-header>
+<div class="image-wrapper">
+  <div id="typeImage"></div>
+</div>
+
+<ion-content>
+  <div class="input-wrapper">
+      <ion-item>
+        <ion-label class="inputname" position="floating">Event name </ion-label>
+        <ion-input [(ngModel)]=event.name></ion-input>
+      </ion-item>
+            
+      <ion-item>
+        <ion-label >Event location</ion-label>
+        <ion-select [(ngModel)]=event.location >
+          <ion-select-option value="Zagreb">Zagreb</ion-select-option>
+          <ion-select-option value="Split">Split</ion-select-option>
+          <ion-select-option value="Vinkovci">Vinkovci</ion-select-option>
+          <ion-select-option value="Osijek">Osijek</ion-select-option>
+          <ion-select-option value="Slavonski Brod">Slavonski Brod</ion-select-option>
+          <ion-select-option value="Rijeka">Rijeka</ion-select-option>
+          <ion-select-option value="Zadar">Zadar</ion-select-option>
+          <ion-select-option value="Pula">Pula</ion-select-option>
+          <ion-select-option value="Varaždin">Varaždin</ion-select-option>
+          <ion-select-option value="Vukovar">Vukovar</ion-select-option>
+          <ion-select-option value="Sisak">Sisak</ion-select-option>
+          <ion-select-option value="Šibenik">Šibenik</ion-select-option>
+          <ion-select-option value="Dubrovnik">Dubrovnik</ion-select-option>
+          <ion-select-option value="Velika Gorica">Velika Gorica</ion-select-option>
+          <ion-select-option value="Bjelovar">Bjelovar</ion-select-option>
+          <ion-select-option value="Koprivnica">Koprivnica</ion-select-option>
+          <ion-select-option value="Đakovo">Đakovo</ion-select-option>
+          <ion-select-option value="Karlovac">Karlovac</ion-select-option>
+          <ion-select-option value="Kaštela">Kaštela</ion-select-option>
+          <ion-select-option value="Sesvete">Sesvete</ion-select-option>
+
+        </ion-select>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label >Event type</ion-label>
+        <ion-select [(ngModel)]=event.type  (ngModelChange)="randomImg()">
+            <ion-select-option value="Music">Music</ion-select-option>
+            <ion-select-option value="Cultural manifestation">Cultural manifestation</ion-select-option>
+            <ion-select-option value="Art">Art</ion-select-option>
+            <ion-select-option value="Show">Show</ion-select-option>
+            <ion-select-option value="Education">Education</ion-select-option>
+            <ion-select-option value="Sport">Sport</ion-select-option>
+            <ion-select-option value="Bussines">Bussines</ion-select-option>
+            <ion-select-option value="Party">Party</ion-select-option>
+            <ion-select-option value="Film">Film</ion-select-option>
+            <ion-select-option value="Other">Music</ion-select-option>
+        </ion-select>
+      </ion-item> 
+      <div class="time-wrapper">
+        <ion-item> 
+          <ion-label>Start date</ion-label>
+          <ion-datetime [(ngModel)]="event.dateStart" displayFormat="D MMM YYYY H:mm" min="2019" max="2029" value="2005-06-17T11:06Z"></ion-datetime>
+        </ion-item>
+      </div>
+  </div>
+  <ion-button class="button1" position="bottom" expand="block" (click)="createEvent()">Create event</ion-button>
+</ion-content>

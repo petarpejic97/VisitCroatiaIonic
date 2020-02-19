@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-row>
+          <ion-buttons  left>
+              <button class="arrow"  ion-button ion-only (click)="backonlist()">
+             <ion-icon  class="back" name="arrow-back"></ion-icon>
+              </button>
+        </ion-buttons>
+              <ion-title id="headertitle" >Visit Croatia</ion-title>
+      </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ul class="myUL">
+    <li *ngFor="let event of eventsCity">
+      <div class=img-wrapper >
+        <img *ngIf="event.type === 'Business'" src="https://source.unsplash.com/collection/6782120/">
+        <img *ngIf="event.type === 'Cultural manifestation'" src="https://source.unsplash.com/collection/6782123/">
+        <img *ngIf="event.type === 'Art'" src="https://source.unsplash.com/collection/6782125/">
+        <img *ngIf="event.type === 'Show'" src="https://source.unsplash.com/collection/6782129/">
+        <img *ngIf="event.type === 'Film'" src="https://source.unsplash.com/collection/6782136/">
+        <img *ngIf="event.type === 'Music'" src="https://source.unsplash.com/collection/6782134/">
+        <img *ngIf="event.type === 'Party'" src="https://source.unsplash.com/collection/6782141/">
+        <img *ngIf="event.type === 'Sport'" src="https://source.unsplash.com/collection/6782119/">
+        <img *ngIf="event.type === 'Education'" src="https://source.unsplash.com/collection/6782142/">
+      </div>
+      <div class="podaci">
+        <h4>{{event.name}}</h4>
+        <p style="color:peru;font-size: 13px" *ngIf="event.type === 'Business'|| event.type==='Film'">{{event.type}}</p>
+        <p style="color:red;font-size: 13px" *ngIf="event.type === 'Cultural manifestation' || event.type==='Music'">{{event.type}}</p>
+        <p style="color:green;font-size: 13px" *ngIf="event.type === 'Sport' || event.type === 'Education'">{{event.type}}</p>
+        <p style="color:rgb(190, 171, 0);font-size: 13px" *ngIf="event.type === 'Show'">{{event.type}}</p>
+        <p style="color:purple;font-size: 13px" *ngIf="event.type === 'Art' || event.type ==='Party'">{{event.type}}</p>
+        <p style="color:grey;font-size: 13px" *ngIf="event.type === 'Other'">{{event.type}}</p>
+        <p style="color:grey">{{event.dateStart}}</p>
+        <p style="color:grey">{{event.time}} </p>
+      </div>  
+    </li>
+  </ul>
+</ion-content>

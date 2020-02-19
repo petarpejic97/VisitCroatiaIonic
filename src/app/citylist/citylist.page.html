@@ -1,0 +1,17 @@
+<ion-content>
+  <ion-row>
+      <img class="logoff" src="../assets/logout.png" (click)="logoff()"/>
+    <ion-col text-center class="title">
+      <a >Cities</a>
+    </ion-col>
+    <img class="create" src="../assets/create.png" (click)="openCreate()"/>
+  </ion-row>
+  
+  <ion-list >
+    <ion-item button (click)="clickItem(homelist)" *ngFor="let homelist of homelists">
+      {{homelist.itemname}}
+    </ion-item>
+  </ion-list>
+
+
+</ion-content>

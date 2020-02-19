@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-row>
+          <ion-buttons  left>
+              <button class="arrow"  ion-button ion-only (click)="backlogin()">
+             <ion-icon  class="back" name="arrow-back"></ion-icon>
+              </button>
+        </ion-buttons>
+              <ion-title class="headertitle" >Registration</ion-title>
+      </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div class="input-wrapper">
+  <ion-item>
+    <ion-label class="input" position="floating">Enter your name </ion-label>
+    <ion-input [(ngModel)]=regKorisnik.name></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label class="input" position="floating">Enter your phone number </ion-label>
+    <ion-input [(ngModel)]=regKorisnik.phone (ngModelChange)="checkNumber()"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label class="input" position="floating">Enter email </ion-label>
+    <ion-input [(ngModel)]=regKorisnik.email (ngModelChange)="checkEmail()"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label class="input" position="floating">Enter your password </ion-label>
+    <ion-input type=password [(ngModel)]=regKorisnik.password></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label class="input" position="floating">Confirm your password </ion-label>
+    <ion-input type=password [(ngModel)]=regKorisnik.confPassword></ion-input>
+  </ion-item>
+  
+</div>
+  <ion-button class="button1" position="bottom" expand="block" (click)="registration()">Registration</ion-button>
+</ion-content>

@@ -1,0 +1,32 @@
+
+ion-toolbar{
+    background-color: #FF9B3C;
+}
+.title{
+    color: white;
+    text-align:center;
+    font-size: 30px;
+    font-family: 'Indie Flower', cursive;
+}
+.content-wrapper{
+    margin-top: 30vh;
+}
+.input-wrapper{
+    padding: 0 20px 0 20px;
+    vertical-align: middle;
+}
+.button-wrapper{
+    padding: 0 20px 0 20px;
+    margin-top:20px;
+    display: grid;
+}
+ion-label{
+    font-family:  'Raleway', sans-serif!important;
+}
+ion-button{
+    font-family:  'Raleway', sans-serif;
+}
+.button-wrapper ion-label{
+    margin-top:10px;
+    text-align: center;
+}

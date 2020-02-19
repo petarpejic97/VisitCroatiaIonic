@@ -1,0 +1,7 @@
+{
+  "name": "iVisit Croatia",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

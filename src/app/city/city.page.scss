@@ -1,0 +1,55 @@
+.headertitle{
+    color: white;
+    text-align:center;
+    font-size: 30px;
+    font-family: 'Indie Flower', cursive;
+    margin-left: -50px;
+}
+#title{
+    font-family: 'Indie Flower', cursive;
+    position: absolute;
+    left: 0;
+    right: 0;
+    font-size: 50px;
+    color:white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    margin-top: 10vh;
+}
+ion-content{
+    display: flex;
+}
+.arrow{
+    background-color:#FF9B3C;
+}
+ion-icon{
+    color:rgb(255, 255, 255);
+}
+.back{
+    width: 30px;
+    height: 30px;
+    margin:10px;
+}
+ion-button{
+    font-family:  'Raleway', sans-serif;
+    width: 250px;
+}
+.button-wrapper{
+    margin-top: 15px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+}
+.btnall{
+    margin-top: 10px;
+}
+#cityimage{
+    margin-top: -2px;
+}
+.date{
+padding:1px;
+transform: translate(0px,5px);
+}
+.map-wrapper{
+    height: 300px;
+}

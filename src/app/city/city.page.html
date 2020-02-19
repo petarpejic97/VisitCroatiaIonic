@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="primary"> 
+    <ion-row>
+        <ion-buttons  left>
+            <button class="arrow"  ion-button ion-only (click)="backonlist()">
+           <ion-icon  class="back" name="arrow-back"></ion-icon>
+            </button>
+      </ion-buttons>
+            <ion-title class="headertitle" >Visit Croatia</ion-title>
+    </ion-row>
+    
+    </ion-toolbar>
+  </ion-header>
+<ion-content display:flex >
+    <div class="header-wrapper">
+        <ion-row>
+            <ion-col >
+            <p id="title" text-center>My centered text</p>
+            </ion-col>
+          </ion-row>
+        <div id="cityimage">
+
+        </div>
+    </div>
+    <div class="button-wrapper" >
+        <ion-button  align-items: center expand="round" class="btndate" (click)="allUpcoming()">All upcoming</ion-button>
+        <div class="date" align-items: center>
+          <ion-item>
+            <ion-label >Start Date</ion-label>
+            <ion-datetime [(ngModel)]="dateStart" value="new Date()" min="2019" max="2029" placeholder="Select Date"></ion-datetime>
+          </ion-item>  
+        </div>
+        <ion-button expand="round" class="btnall" (click)="chooseDate()">Search date</ion-button>
+    </div>
+    <div id="map-wrapper">
+    </div>
+    
+</ion-content>
